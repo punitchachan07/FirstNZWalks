@@ -37,7 +37,7 @@ namespace FirstNZWalks.API.Repositories
 
         }
 
-        public async Task<Region> GetAll(Guid id)
+        public async Task<Region> GetAsync(Guid id)
         {
             return await nZWalksDbContext.Regions.FirstOrDefaultAsync(x=>x.Id == id);
         }

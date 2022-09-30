@@ -34,7 +34,7 @@ namespace FirstNZWalks.API.Controllers
         [ActionName("getRegionAsync")]
         public async Task<IActionResult> GetRegionAsync(Guid id)
         {
-            var region = await regionRepository.GetAll(id);
+            var region = await regionRepository.GetAsync(id);
             if(region == null)
             {
                 return NotFound();
